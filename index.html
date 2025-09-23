@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorado Stain Master - Homepage</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://coloradostainmaster.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-04-at-17.26.05_5c919a6b.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .cta-btn {
+      background-color: #FF7F50;
+      padding: 15px 30px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .cta-btn:hover {
+      background-color: #EF8014;
+    }
+
+    /* About Us Section */
+    .about-us {
+      background-color: #ffffff;
+      color: #333;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .about-us h2 {
+      font-size: 3.5rem;
+      color: #158F43;
+      margin-bottom: 30px;
+    }
+    .about-us p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Service Cards Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 80px 20px;
+      background-color: #F7F7F7;
+      text-align: center;
+    }
+    .service-card {
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+    .service-card h3 {
+      font-size: 2.2rem;
+      color: #158F43;
+      margin-bottom: 20px;
+    }
+    .service-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us {
+      background-color: #158F43;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .why-choose-us h2 {
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+    }
+    .why-choose-us ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .why-choose-us li {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    /* Locations Section */
+    .locations {
+      padding: 80px 20px;
+      background-color: #FFFFFF;
+      text-align: center;
+    }
+    .locations h2 {
+      font-size: 3.5rem;
+      color: #158F43;
+      margin-bottom: 40px;
+    }
+    .locations ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .locations li {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    /* Map Section */
+    .map-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .location-map {
+      width: 100%;
+      height: 450px;
+      border: 0;
+    }
+
+    /* FAQ Section */
+    .faq {
+      background-color: #F7F7F7;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .faq h2 {
+      font-size: 3.5rem;
+      color: #158F43;
+      margin-bottom: 40px;
+    }
+    .faq-item {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Us Section */
+    .contact-us {
+      padding: 80px 20px;
+      background-color: #FF7F50;
+      color: white;
+      text-align: center;
+    }
+    .contact-us h2 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+    }
+    .contact-us p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+    .contact-us a {
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    /* Copyright Section */
+    .copyright {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .copyright p {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .copyright a {
+      color: #FF7F50;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to Colorado Stain Master</h1>
+  <a href="#contact" class="cta-btn">Get a Free Estimate</a>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us">
+  <h2>About Colorado Stain Master</h2>
+  <p>Colorado Stain Master is a leading provider of water damage restoration, mold remediation, carpet cleaning, and air duct cleaning services across Colorado Springs and surrounding areas. We are dedicated to providing fast, efficient, and high-quality services tailored to your needs.</p>
+  <p>With years of experience and a focus on customer satisfaction, we help homeowners and businesses restore their properties after unexpected events. Whether you are dealing with a flooded basement or need professional cleaning services, we are here to provide expert solutions.</p>
+</section>
+
+<!-- Service Cards Section (9 Services) -->
+<section class="services">
+  <div class="service-card">
+    <h3>Water Damage Restoration</h3>
+    <p>Water damage can be devastating. Our rapid water extraction and drying services help restore your property quickly, preventing further damage and mold growth. We are available 24/7 for emergencies.</p>
+  </div>
+  <div class="service-card">
+    <h3>Mold Remediation</h3>
+    <p>Mold can affect your health and property. We offer comprehensive mold remediation services to remove mold, prevent future growth, and improve air quality in your home or office.</p>
+  </div>
+  <div class="service-card">
+    <h3>Carpet Cleaning</h3>
+    <p>Our carpet cleaning services include deep cleaning, stain removal, and deodorizing to leave your carpets looking and feeling fresh, improving the indoor air quality of your space.</p>
+  </div>
+  <div class="service-card">
+    <h3>Air Duct Cleaning</h3>
+    <p>Improve indoor air quality and remove harmful contaminants with our expert air duct cleaning services. We ensure that your HVAC system runs more efficiently while breathing new life into your indoor environment.</p>
+  </div>
+  <div class="service-card">
+    <h3>Upholstery Cleaning</h3>
+    <p>Our upholstery cleaning services remove dirt, stains, and allergens from furniture, ensuring your home remains comfortable and healthy. We treat your furniture with care and attention.</p>
+  </div>
+  <div class="service-card">
+    <h3>Fire Damage Restoration</h3>
+    <p>After fire damage, time is critical. Our team responds quickly to clean up, restore, and rebuild, using industry-leading techniques to restore your home to its pre-loss condition.</p>
+  </div>
+  <div class="service-card">
+    <h3>Flood Damage Cleanup</h3>
+    <p>Flood damage can cause structural harm and lead to mold growth. We offer full flood damage restoration, including water extraction, cleaning, and rebuilding services to restore your property.</p>
+  </div>
+  <div class="service-card">
+    <h3>Tile and Grout Cleaning</h3>
+    <p>Our tile and grout cleaning services leave your floors sparkling and free from harmful bacteria. We use advanced methods to deep clean and restore your floors to their original condition.</p>
+  </div>
+  <div class="service-card">
+    <h3>Odor Removal</h3>
+    <p>Unpleasant odors can linger in your home or business. Our odor removal services use advanced technology to eliminate odors at their source, leaving your space smelling fresh and clean.</p>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+  <h2>Why Choose Colorado Stain Master?</h2>
+  <ul>
+    <li><strong>Experienced Professionals:</strong> Our team is fully certified, insured, and experienced in handling all restoration and cleaning tasks with precision and care.</li>
+    <li><strong>24/7 Emergency Services:</strong> We are available 24/7 to help you with water damage, mold remediation, and other emergency restoration services.</li>
+    <li><strong>Advanced Technology:</strong> We use the latest equipment and techniques to deliver efficient and effective results.</li>
+    <li><strong>Customer Satisfaction:</strong> We guarantee that you’ll be satisfied with our work, and we’re committed to providing the highest quality service.</li>
+    <li><strong>Insurance Assistance:</strong> We work directly with your insurance company to simplify the claims process and make sure your property is restored to its pre-damage condition.</li>
+  </ul>
+</section>
+
+<!-- Locations Section -->
+<section class="locations">
+  <h2>Our Service Locations</h2>
+  <p>We proudly serve Colorado Springs and the surrounding areas. Here’s a breakdown of our service locations and the areas we cover:</p>
+  <ul>
+    <li><strong>Colorado Springs:</strong> As the heart of our business, we offer all of our cleaning and restoration services to residents and businesses throughout Colorado Springs. Whether it’s water damage restoration or carpet cleaning, we are here to help.</li>
+    <li><strong>Castle Rock:</strong> Castle Rock is a growing community, and we proudly provide services such as mold remediation and water damage restoration to this beautiful area. Our team can quickly respond to emergencies in Castle Rock.</li>
+    <li><strong>Parker:</strong> Serving the Parker area, we specialize in air duct cleaning, flood damage cleanup, and more. Parker residents trust Colorado Stain Master to provide fast, reliable service when disaster strikes.</li>
+    <li><strong>Monument:</strong> Our Monument location allows us to offer comprehensive carpet cleaning and water damage restoration to both homes and businesses in this picturesque town.</li>
+    <li><strong>Fountain:</strong> The Fountain area relies on us for professional cleaning services, including upholstery cleaning and flood restoration. We work tirelessly to ensure homes and businesses are safe and clean.</li>
+    <li><strong>Woodland Park:</strong> Offering the same great services, Woodland Park benefits from our expertise in mold remediation and water damage restoration. We handle both residential and commercial needs in this community.</li>
+    <li><strong>Manitou Springs:</strong> Known for its charming neighborhoods, Manitou Springs trusts us to provide eco-friendly carpet cleaning and mold removal services. We’re committed to keeping this area clean and healthy.</li>
+    <li><strong>Denver:</strong> Our Denver location brings professional services like fire damage restoration, tile cleaning, and water extraction to the heart of Colorado’s capital. Our Denver team is always ready for emergency situations.</li>
+    <li><strong>Aspen:</strong> In Aspen, Colorado, we provide specialized services like odor removal and comprehensive carpet cleaning to keep your vacation home or business pristine. We understand the unique needs of this high-altitude area.</li>
+    <li><strong>Boulder:</strong> Serving the Boulder community, we offer full-service cleaning and restoration, including upholstery cleaning and emergency water extraction. We’re proud to be a trusted name in Boulder’s restoration services.</li>
+  </ul>
+</section>
+
+
+<!-- Map Section -->
+<section class="map-section">
+  <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d397719.8649235481!2d-104.792941!3d38.851089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8713454439baece1%3A0x81b77268c9f1cd43!2sColorado%20StainMaster%20Carpet%20Cleaners%20%26%20Water%20Damage%20Restoration%20(Colorado%20Springs)!5e0!3m2!1sen!2s!4v1758604953989!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq">
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <div class="faq-item">
+    <h3>What should I do if I have water damage in my home?</h3>
+    <p>If you experience water damage, your first priority should be ensuring your safety. Once you’ve taken necessary precautions, contact Colorado Stain Master immediately. We offer 24/7 emergency services and will quickly assess the damage and begin restoration to prevent further issues such as mold growth.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How long does mold remediation take?</h3>
+    <p>The length of time required for mold remediation depends on the severity and extent of the mold growth. Typically, mold removal takes 1-3 days for an average-sized home. Our team will provide an accurate time frame after assessing the situation.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Are the cleaning products used by Colorado Stain Master safe?</h3>
+    <p>Yes! We use environmentally friendly and non-toxic cleaning products for all of our services. Our team ensures that all products used are safe for your family, pets, and the environment while still being highly effective in cleaning and restoring your home or business.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Will my insurance cover water damage restoration services?</h3>
+    <p>Many home insurance policies cover water damage restoration. Colorado Stain Master works directly with your insurance company to help streamline the claims process. Our team can provide you with an estimate, so you have all the necessary documentation for your claim.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How can I prevent mold growth in my home?</h3>
+    <p>Preventing mold growth involves controlling moisture levels in your home. We recommend fixing any leaks promptly, using dehumidifiers, ensuring proper ventilation, and maintaining low humidity levels in areas prone to dampness, such as basements and bathrooms.</p>
+  </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section class="contact-us">
+  <h2>Get In Touch</h2>
+  <p>Need assistance? Contact us for a free estimate or to discuss your restoration needs. We’re here to help!</p>
+  <a href="https://www.facebook.com/coloradostainmaster" class="cta-btn">Follow Us on Facebook</a>
+  <a href="https://www.instagram.com/coloradostainmaster/" class="cta-btn">Follow Us on Instagram</a>
+</section>
+
+<!-- Copyright Section -->
+<section class="copyright">
+  <p>© 2025 Colorado Stain Master. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+</section>
+
+</body>
+</html>
