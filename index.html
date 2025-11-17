@@ -1,345 +1,983 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="Tuxe8gL9hxIuYALz6rC0gj5UWtOU_KMMt1GW_8LOA6c" />
-  <title>Colorado Stain Master - Homepage</title>
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      font-size: 16px;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-image: url('https://coloradostainmaster.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-04-at-17.26.05_5c919a6b.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      flex-direction: column;
-      position: relative;
-    }
-    .hero h1 {
-      font-size: 4.5rem;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-    .cta-btn {
-      background-color: #FF7F50;
-      padding: 15px 30px;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.5rem;
-      margin: 20px;
-      transition: background-color 0.3s ease;
-    }
-    .cta-btn:hover {
-      background-color: #EF8014;
-    }
-
-    /* About Us Section */
-    .about-us {
-      background-color: #ffffff;
-      color: #333;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .about-us h2 {
-      font-size: 3.5rem;
-      color: #158F43;
-      margin-bottom: 30px;
-    }
-    .about-us p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    /* Service Cards Section */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 80px 20px;
-      background-color: #F7F7F7;
-      text-align: center;
-    }
-    .service-card {
-      padding: 40px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    }
-    .service-card h3 {
-      font-size: 2.2rem;
-      color: #158F43;
-      margin-bottom: 20px;
-    }
-    .service-card p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Why Choose Us Section */
-    .why-choose-us {
-      background-color: #158F43;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .why-choose-us h2 {
-      font-size: 3.5rem;
-      margin-bottom: 40px;
-    }
-    .why-choose-us ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .why-choose-us li {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    /* Locations Section */
-    .locations {
-      padding: 80px 20px;
-      background-color: #FFFFFF;
-      text-align: center;
-    }
-    .locations h2 {
-      font-size: 3.5rem;
-      color: #158F43;
-      margin-bottom: 40px;
-    }
-    .locations ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .locations li {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    /* Map Section */
-    .map-section {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .location-map {
-      width: 100%;
-      height: 450px;
-      border: 0;
-    }
-
-    /* FAQ Section */
-    .faq {
-      background-color: #F7F7F7;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .faq h2 {
-      font-size: 3.5rem;
-      color: #158F43;
-      margin-bottom: 40px;
-    }
-    .faq-item {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-
-    /* Contact Us Section */
-    .contact-us {
-      padding: 80px 20px;
-      background-color: #FF7F50;
-      color: white;
-      text-align: center;
-    }
-    .contact-us h2 {
-      font-size: 3.5rem;
-      margin-bottom: 30px;
-    }
-    .contact-us p {
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-    }
-    .contact-us a {
-      font-size: 1.2rem;
-      color: white;
-      text-decoration: none;
-      margin: 10px;
-    }
-
-    /* Copyright Section */
-    .copyright {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .copyright p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-    .copyright a {
-      color: #FF7F50;
-      text-decoration: none;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado StainMaster | Carpet Cleaning & Water Damage Restoration</title>
+    <meta name="description" content="Colorado StainMaster provides professional carpet cleaning, water damage restoration, and mold remediation services in Colorado Springs and surrounding areas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a4b7a;
+            --secondary: #2c6aa0;
+            --accent: #e67e22;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --white: #ffffff;
+            --gray: #95a5a6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #d35400;
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #1a4b7a;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            max-width: 250px;
+        }
+        
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .contact-header {
+            text-align: right;
+        }
+        
+        .phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 122, 0.8), rgba(26, 75, 122, 0.9)), url('https://coloradostainmaster.com/wp-content/uploads/2025/10/Professional-Carpet-Cleaning-in-Colorado-Springs.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-category {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .service-list li a {
+            color: var(--text);
+        }
+        
+        .service-list li a:hover {
+            color: var(--accent);
+        }
+        
+        /* Service Areas */
+        .service-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .service-area {
+            background-color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Citations */
+        .citations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .citation-link {
+            background-color: var(--white);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .citation-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .blog-content h3 a {
+            color: var(--dark);
+        }
+        
+        .blog-content h3 a:hover {
+            color: var(--accent);
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(44, 106, 160, 0.9), rgba(26, 75, 122, 0.9)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+        }
+        
+        .cta h2:after {
+            background-color: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .footer-logo {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            color: var(--gray);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent);
+            min-width: 20px;
+        }
+        
+        .emergency-box {
+            background: linear-gradient(135deg, var(--accent), #d35400);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .emergency-box h4 {
+            color: var(--white);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .emergency-box p {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--accent);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer-btn:hover {
+            background-color: var(--dark);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                position: relative;
+            }
+            
+            .contact-header {
+                text-align: center;
+                margin-top: 15px;
+            }
+            
+            .nav-toggle {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-areas {
+                justify-content: flex-start;
+            }
+            
+            .service-area {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .citations-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .citation-link {
+                font-size: 0.9rem;
+                padding: 12px 8px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .emergency-box {
+                text-align: center;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .service-category {
+                padding: 20px;
+            }
+            
+            .citations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="https://coloradostainmaster.com" class="logo">
+                <img src="https://coloradostainmaster.com/wp-content/uploads/2025/01/Logo2-removebg-preview.png" alt="Colorado StainMaster Carpet Cleaners & Water Damage Restoration">
+            </a>
+            <div class="contact-header">
+                <div class="phone">(719) 644-4854</div>
+                <div>24/7 Emergency Service</div>
+            </div>
+            <button class="nav-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#service-areas">Service Areas</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#citations">Our Citations</a></li>
+                    <li><a href="#blog">Expert Advice</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>Welcome to Colorado Stain Master</h1>
-  <a href="#contact" class="cta-btn">Get a Free Estimate</a>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Carpet Cleaning & Water Damage Restoration in Colorado Springs</h1>
+            <p>Colorado StainMaster provides expert cleaning and restoration services for homes and businesses throughout Colorado Springs and surrounding areas. Trust our certified technicians for all your carpet cleaning, water damage restoration, and mold remediation needs.</p>
+            <div class="hero-buttons">
+                <a href="tel:7196444854" class="btn">Call Now for Emergency Service</a>
+                <a href="#contact" class="btn btn-secondary">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
 
-<!-- About Us Section -->
-<section class="about-us">
-  <h2>About Colorado Stain Master</h2>
-  <p>Colorado Stain Master is a leading provider of water damage restoration, mold remediation, <a href="https://coloradostainmaster.com/">Carpet Cleaning</a>, and air duct cleaning services across Colorado Springs and surrounding areas. We are dedicated to providing fast, efficient, and high-quality services tailored to your needs.</p>
-  <p>With years of experience and a focus on customer satisfaction, we help homeowners and businesses restore their properties after unexpected events. Whether you are dealing with a flooded basement or need professional cleaning services, we are here to provide expert solutions.</p>
-</section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Professional Services</h2>
+                <p>At Colorado Stain Master, we focus on more than surface cleaning. We bring damaged and worn areas back to life. With two decades of experience and IICRC Master Certified technicians, our team provides deep cleaning and restoration that helps your carpets, upholstery, and flooring look fresh again. We use advanced extraction systems, eco friendly products, and fast drying techniques that clear out embedded dirt, bacteria, and stubborn pet odors for lasting results. Every project is done with integrity, clear communication, and quality you can see the moment we finish.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Cleaning Services</h3>
+                    <ul class="service-list">
+                        <li><a href="https://coloradostainmaster.com/rug-cleaning-colorado-springs/">Rug Cleaning</a></li>
+                        <li><a href="https://coloradostainmaster.com/upholstery-cleaning/">Upholstery Cleaning</a></li>
+                        <li><a href="https://coloradostainmaster.com/tile-and-grout-cleaning-colorado-springs/">Tile and Grout Cleaning</a></li>
+                        <li><a href="https://coloradostainmaster.com/dryer-vent-cleaning/">Dryer Vent Cleaning</a></li>
+                        <li><a href="https://coloradostainmaster.com/">Carpet Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Restoration & Remediation Services</h3>
+                    <ul class="service-list">
+                        <li><a href="https://coloradostainmaster.com/water-damage-restoration-in-colorado-springs/">Water Damage Restoration</a></li>
+                        <li><a href="https://coloradostainmaster.com/flood-restoration-in-colorado-springs/">Flood Restoration</a></li>
+                        <li><a href="https://coloradostainmaster.com/water-extraction-sewage-cleanup-colorado-springs/">Water Extraction & Sewage Cleanup</a></li>
+                        <li><a href="https://coloradostainmaster.com/mold-remediation/">Mold Remediation & Removal</a></li>
+                        <li><a href="https://coloradostainmaster.com/mold-inspection-colorado-springs/">Mold Inspection</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Service Cards Section (9 Services) -->
-<section class="services">
-  <div class="service-card">
-    <h3>Water Damage Restoration</h3>
-    <p>Water damage can be devastating. Our rapid water extraction and drying services help restore your property quickly, preventing further damage and mold growth. We are available 24/7 for emergencies.</p>
-  </div>
-  <div class="service-card">
-    <h3>Mold Remediation</h3>
-    <p>Mold can affect your health and property. We offer comprehensive mold remediation services to remove mold, prevent future growth, and improve air quality in your home or office.</p>
-  </div>
-  <div class="service-card">
-    <h3>Carpet Cleaning</h3>
-    <p>Our carpet cleaning services include deep cleaning, stain removal, and deodorizing to leave your carpets looking and feeling fresh, improving the indoor air quality of your space.</p>
-  </div>
-  <div class="service-card">
-    <h3>Air Duct Cleaning</h3>
-    <p>Improve indoor air quality and remove harmful contaminants with our expert air duct cleaning services. We ensure that your HVAC system runs more efficiently while breathing new life into your indoor environment.</p>
-  </div>
-  <div class="service-card">
-    <h3>Upholstery Cleaning</h3>
-    <p>Our upholstery cleaning services remove dirt, stains, and allergens from furniture, ensuring your home remains comfortable and healthy. We treat your furniture with care and attention.</p>
-  </div>
-  <div class="service-card">
-    <h3>Fire Damage Restoration</h3>
-    <p>After fire damage, time is critical. Our team responds quickly to clean up, restore, and rebuild, using industry-leading techniques to restore your home to its pre-loss condition.</p>
-  </div>
-  <div class="service-card">
-    <h3>Flood Damage Cleanup</h3>
-    <p>Flood damage can cause structural harm and lead to mold growth. We offer full flood damage restoration, including water extraction, cleaning, and rebuilding services to restore your property.</p>
-  </div>
-  <div class="service-card">
-    <h3>Tile and Grout Cleaning</h3>
-    <p>Our tile and grout cleaning services leave your floors sparkling and free from harmful bacteria. We use advanced methods to deep clean and restore your floors to their original condition.</p>
-  </div>
-  <div class="service-card">
-    <h3>Odor Removal</h3>
-    <p>Unpleasant odors can linger in your home or business. Our odor removal services use advanced technology to eliminate odors at their source, leaving your space smelling fresh and clean.</p>
-  </div>
-</section>
+    <!-- Service Areas Section -->
+    <section id="service-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas We Serve</h2>
+                <p>Colorado StainMaster proudly serves homeowners and businesses throughout the Colorado Springs region.</p>
+            </div>
+            <div class="service-areas">
+                <div class="service-area">Pueblo, CO</div>
+                <div class="service-area">Centennial, CO</div>
+                <div class="service-area">Castle Rock, CO</div>
+                <div class="service-area">Parker, CO</div>
+                <div class="service-area">Palmer Lake, CO</div>
+                <div class="service-area">Fountain, CO</div>
+                <div class="service-area">Manitou Springs, CO</div>
+                <div class="service-area">Canon City, CO</div>
+                <div class="service-area">Monument, CO</div>
+                <div class="service-area">Woodland Park, CO</div>
+            </div>
+        </div>
+    </section>
 
-<!-- Why Choose Us Section -->
-<section class="why-choose-us">
-  <h2>Why Choose Colorado Stain Master?</h2>
-  <ul>
-    <li><strong>Experienced Professionals:</strong> Our team is fully certified, insured, and experienced in handling all restoration and cleaning tasks with precision and care.</li>
-    <li><strong>24/7 Emergency Services:</strong> We are available 24/7 to help you with water damage, mold remediation, and other emergency restoration services.</li>
-    <li><strong>Advanced Technology:</strong> We use the latest equipment and techniques to deliver efficient and effective results.</li>
-    <li><strong>Customer Satisfaction:</strong> We guarantee that you’ll be satisfied with our work, and we’re committed to providing the highest quality service.</li>
-    <li><strong>Insurance Assistance:</strong> We work directly with your insurance company to simplify the claims process and make sure your property is restored to its pre-damage condition.</li>
-  </ul>
-</section>
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Colorado StainMaster</h2>
+                <p>With years of experience and certified expertise, we're your trusted partner for all cleaning and restoration needs.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Certified Technicians</h3>
+                    <p>Our team consists of IICRC certified professionals with extensive training in the latest cleaning and restoration techniques.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Rapid Response</h3>
+                    <p>We offer 24/7 emergency services because we understand that water and mold damage require immediate attention.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Advanced Equipment</h3>
+                    <p>We use state-of-the-art equipment and EPA-approved solutions to ensure the best results for your home or business.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💯</div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Your satisfaction is our top priority. We stand behind our work with a comprehensive satisfaction guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Locations Section -->
-<section class="locations">
-  <h2>Our Service Locations</h2>
-  <p>We proudly serve Colorado Springs and the surrounding areas. Here’s a breakdown of our service locations and the areas we cover:</p>
-  <ul>
-    <li><strong>Colorado Springs:</strong> As the heart of our business, we offer all of our <a href="https://coloradostainmaster.com/">cleaning and restoration services</a> to residents and businesses throughout Colorado Springs. Whether it’s water damage restoration or carpet cleaning, we are here to help.</li>
-    <li><strong>Castle Rock:</strong> Castle Rock is a growing community, and we proudly provide services such as mold remediation and water damage restoration to this beautiful area. Our team can quickly respond to emergencies in Castle Rock.</li>
-    <li><strong>Parker:</strong> Serving the Parker area, we specialize in air duct cleaning, flood damage cleanup, and more. Parker residents trust Colorado Stain Master to provide fast, reliable service when disaster strikes.</li>
-    <li><strong>Monument:</strong> Our Monument location allows us to offer comprehensive carpet cleaning and water damage restoration to both homes and businesses in this picturesque town.</li>
-    <li><strong>Fountain:</strong> The Fountain area relies on us for professional cleaning services, including upholstery cleaning and flood restoration. We work tirelessly to ensure homes and businesses are safe and clean.</li>
-    <li><strong>Woodland Park:</strong> Offering the same great services, Woodland Park benefits from our expertise in mold remediation and water damage restoration. We handle both residential and commercial needs in this community.</li>
-    <li><strong>Manitou Springs:</strong> Known for its charming neighborhoods, Manitou Springs trusts us to provide eco-friendly carpet cleaning and mold removal services. We’re committed to keeping this area clean and healthy.</li>
-    <li><strong>Denver:</strong> Our Denver location brings professional services like fire damage restoration, tile cleaning, and water extraction to the heart of Colorado’s capital. Our Denver team is always ready for emergency situations.</li>
-    <li><strong>Aspen:</strong> In Aspen, Colorado, we provide specialized services like odor removal and comprehensive carpet cleaning to keep your vacation home or business pristine. We understand the unique needs of this high-altitude area.</li>
-    <li><strong>Boulder:</strong> Serving the Boulder community, we offer full-service cleaning and restoration, including upholstery cleaning and emergency water extraction. We’re proud to be a trusted name in Boulder’s restoration services.</li>
-  </ul>
-</section>
+    <!-- Citations Section -->
+    <section id="citations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us Online</h2>
+                <p>Colorado StainMaster is featured on these trusted platforms and business directories.</p>
+            </div>
+            <div class="citations-grid">
+                <a href="https://share.google/k1CXy2MTfImpeXpUO" class="citation-link" target="_blank">Google My Business</a>
+                <a href="https://www.cybo.com/US-biz/colorado-stainmaster-carpet-cleaners" class="citation-link" target="_blank">Cybo</a>
+                <a href="https://www.n49.com/biz/6906522/colorado-stainmaster-carpet-cleaners-&-water-damage-restoration-(colorado-springs)-co-colorado-springs-1821-francis-pl/" class="citation-link" target="_blank">N49</a>
+                <a href="https://clutch.co/profile/colorado-stainmaster-carpet-cleaners-water-damage-restoration-colorado-springs" class="citation-link" target="_blank">Clutch</a>
+                <a href="https://www.fastexpert.com/pros-carpetcleaningservices/colorado-stainmaster-carpet-cleaners-water-damage-restoration-colorado-springs-125024/" class="citation-link" target="_blank">FastExpert</a>
+                <a href="https://thebuildermarket.com/pros/colorado-stainmaster-carpet-cleaners-and-water-damage-restoration-(colorado-springs)-r5gyxl2x" class="citation-link" target="_blank">The Builder Market</a>
+                <a href="https://colorado-stainmaster-carpet-cleaners-water.hub.biz/" class="citation-link" target="_blank">Hub.biz</a>
+                <a href="https://patch.com/colorado/colorado-springs/business/listing/557135/colorado-stainmaster-colorado-springs" class="citation-link" target="_blank">Patch</a>
+                <a href="https://about.me/coloradostainmastercarpet" class="citation-link" target="_blank">About.me</a>
+                <a href="https://yandex.com/maps/org/colorado_stainmaster_colorado_springs/162282273042/" class="citation-link" target="_blank">Yandex Maps</a>
+                <a href="https://www.apsense.com/user/coloradostainmaster" class="citation-link" target="_blank">APSense</a>
+                <a href="https://www.freelistingusa.com/listings/colorado-stainmaster-carpet-cleaners-water-damage-restoration-colorado-springs" class="citation-link" target="_blank">FreeListing USA</a>
+                <a href="https://trueen.com/business/listing/colorado-stainmaster-colorado-springs/656618" class="citation-link" target="_blank">Trueen</a>
+                <a href="https://www.provenexpert.com/colorado-stainmaster/" class="citation-link" target="_blank">ProvenExpert</a>
+                <a href="https://www.callupcontact.com/b/businessprofile/Colorado_Stain_Master/9615986" class="citation-link" target="_blank">CallUpContact</a>
+                <a href="https://www.hotfrog.com/company/661425d41e4a1ef1eaa85b83e0135246/colorado-stainmaster-carpet-cleaners-water-damage-restoration/colorado-springs/carpet-flooring" class="citation-link" target="_blank">HotFrog</a>
+                <a href="https://www.merchantcircle.com/colorado-stainmaster-carpet-cleaners-and-water-damag-colorado-springs-co" class="citation-link" target="_blank">MerchantCircle</a>
+                <a href="https://www.zeemaps.com/map/oajkj?group=6879271&location=1821%20Francis%20Pl%2C%20Colorado%20Springs%2C%20CO%2C%2080909%2C%20USA" class="citation-link" target="_blank">ZeeMaps</a>
+                <a href="https://www.dealerbaba.com/suppliers/others/colorado-stainmaster-carpet-cleaners-water-damage-restoration.html" class="citation-link" target="_blank">DealerBaba</a>
+                <a href="https://www.brownbook.net/business/54383919/colorado-stainmaster-carpet-cleaners-water-damage-restoration-colorado-springs" class="citation-link" target="_blank">Brownbook</a>
+                <a href="https://www.bark.com/en/us/company/colorado-stainmaster-carpet-cleaners-amp-water-damage-restoration-colorado-springs/dvMR3z/" class="citation-link" target="_blank">Bark</a>
+                <a href="https://www.buildzoom.com/contractor/colorado-stainmaster-carpet-cleaners-water-damage-restoration-colorado-springs" class="citation-link" target="_blank">BuildZoom</a>
+                <a href="https://www.houzz.com/pro/maddie-hills95/colorado-stainmaster-carpet-cleaner-water-damage" class="citation-link" target="_blank">Houzz</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expert Cleaning & Restoration Advice</h2>
+                <p>Learn more about maintaining your home and dealing with common household issues from our experts.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/what-is-mold-remediation/">What Is Mold Remediation and When Do You Need It?</a></h3>
+                        <p>Learn about the mold remediation process and when it's necessary to protect your home and health from dangerous mold growth.</p>
+                        <a href="https://coloradostainmaster.com/what-is-mold-remediation/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/do-hvac-companies-clean-dryer-vents/">Do HVAC Companies Clean Dryer Vents? Understanding Your Options</a></h3>
+                        <p>Discover who should clean your dryer vents and why professional cleaning is essential for home safety and efficiency.</p>
+                        <a href="https://coloradostainmaster.com/do-hvac-companies-clean-dryer-vents/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/why-does-my-bathroom-smell-like-urine/">Why Does My Bathroom Smell Like Urine? Common Causes and Solutions</a></h3>
+                        <p>Uncover the reasons behind persistent bathroom odors and learn effective solutions to eliminate them for good.</p>
+                        <a href="https://coloradostainmaster.com/why-does-my-bathroom-smell-like-urine/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/how-to-clean-up-raw-sewage-in-basement/">How to Clean Up Raw Sewage in Your Basement Safely</a></h3>
+                        <p>Follow our step-by-step guide to safely handle and clean up raw sewage backups in your basement to prevent health hazards.</p>
+                        <a href="https://coloradostainmaster.com/how-to-clean-up-raw-sewage-in-basement/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/will-steam-cleaning-carpet-kill-mold/">Will Steam Cleaning Carpet Kill Mold? The Truth Revealed</a></h3>
+                        <p>Find out if steam cleaning is effective against mold and learn the proper methods for dealing with mold in carpets.</p>
+                        <a href="https://coloradostainmaster.com/will-steam-cleaning-carpet-kill-mold/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3><a href="https://coloradostainmaster.com/why-does-my-kitchen-sink-drain-smell/">Why Does My Kitchen Sink Drain Smell? Causes and Fixes</a></h3>
+                        <p>Discover the common causes of foul kitchen sink odors and effective methods to eliminate them for a fresher home.</p>
+                        <a href="https://coloradostainmaster.com/why-does-my-kitchen-sink-drain-smell/" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Map Section -->
-<section class="map-section">
-  <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d397719.8649235481!2d-104.792941!3d38.851089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8713454439baece1%3A0x81b77268c9f1cd43!2sColorado%20StainMaster%20Carpet%20Cleaners%20%26%20Water%20Damage%20Restoration%20(Colorado%20Springs)!5e0!3m2!1sen!2s!4v1758604953989!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</section>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Restore Your Home or Business?</h2>
+            <p>Contact Colorado StainMaster today for professional cleaning and restoration services you can trust. We're available 24/7 for emergencies and offer free estimates for all our services.</p>
+            <a href="tel:7196444854" class="btn">Call (719) 644-4854</a>
+        </div>
+    </section>
 
-<!-- FAQ Section -->
-<section class="faq">
-  <h2>Frequently Asked Questions (FAQs)</h2>
-  <div class="faq-item">
-    <h3>What should I do if I have water damage in my home?</h3>
-    <p>If you experience water damage, your first priority should be ensuring your safety. Once you’ve taken necessary precautions, contact Colorado Stain Master immediately. We offer 24/7 emergency services and will quickly assess the damage and begin restoration to prevent further issues such as mold growth.</p>
-  </div>
-  <div class="faq-item">
-    <h3>How long does mold remediation take?</h3>
-    <p>The length of time required for mold remediation depends on the severity and extent of the mold growth. Typically, mold removal takes 1-3 days for an average-sized home. Our team will provide an accurate time frame after assessing the situation.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Are the cleaning products used by Colorado Stain Master safe?</h3>
-    <p>Yes! We use environmentally friendly and non-toxic cleaning products for all of our services. Our team ensures that all products used are safe for your family, pets, and the environment while still being highly effective in cleaning and restoring your home or business.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Will my insurance cover water damage restoration services?</h3>
-    <p>Many home insurance policies cover water damage restoration. Colorado Stain Master works directly with your insurance company to help streamline the claims process. Our team can provide you with an estimate, so you have all the necessary documentation for your claim.</p>
-  </div>
-  <div class="faq-item">
-    <h3>How can I prevent mold growth in my home?</h3>
-    <p>Preventing mold growth involves controlling moisture levels in your home. We recommend fixing any leaks promptly, using dehumidifiers, ensuring proper ventilation, and maintaining low humidity levels in areas prone to dampness, such as basements and bathrooms.</p>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="https://coloradostainmaster.com" class="footer-logo">
+                        <img src="https://coloradostainmaster.com/wp-content/uploads/2025/01/Logo2-removebg-preview.png" alt="Colorado StainMaster Carpet Cleaners & Water Damage Restoration">
+                    </a>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/AHzHhW2JgdcuKhD5A">1821 Francis Pl, Colorado Springs, CO 80909</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:7196444854">(719) 644-4854</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:coloradostainmaster@gmail.com">coloradostainmaster@gmail.com</a></p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/coloradostainmaster" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/coloradostainmaster/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <div class="services-list">
+                        <ul>
+                            <li><a href="https://coloradostainmaster.com/rug-cleaning-colorado-springs/">Rug Cleaning</a></li>
+                            <li><a href="https://coloradostainmaster.com/upholstery-cleaning/">Upholstery Cleaning</a></li>
+                            <li><a href="https://coloradostainmaster.com/tile-and-grout-cleaning-colorado-springs/">Tile & Grout Cleaning</a></li>
+                            <li><a href="https://coloradostainmaster.com/dryer-vent-cleaning/">Dryer Vent Cleaning</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="https://coloradostainmaster.com/water-damage-restoration-in-colorado-springs/">Water Damage Restoration</a></li>
+                            <li><a href="https://coloradostainmaster.com/flood-restoration-in-colorado-springs/">Flood Restoration</a></li>
+                            <li><a href="https://coloradostainmaster.com/mold-remediation/">Mold Remediation</a></li>
+                            <li><a href="https://coloradostainmaster.com/mold-inspection-colorado-springs/">Mold Inspection</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Emergency Services</h3>
+                    <div class="emergency-box">
+                        <h4>Available 24/7</h4>
+                        <p>For water damage, flood restoration, and emergency cleaning services throughout Colorado Springs and surrounding areas.</p>
+                        <a href="tel:7196444854" class="footer-btn">Call Now: (719) 644-4854</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Colorado StainMaster Carpet Cleaners & Water Damage Restoration. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
 
-<!-- Contact Us Section -->
-<section class="contact-us">
-  <h2>Get In Touch</h2>
-  <p>Need assistance? Contact us for a free estimate or to discuss your restoration needs. We’re here to help!</p>
-  <a href="https://www.facebook.com/coloradostainmaster" class="cta-btn">Follow Us on Facebook</a>
-  <a href="https://www.instagram.com/coloradostainmaster/" class="cta-btn">Follow Us on Instagram</a>
-</section>
-
-<!-- Copyright Section -->
-<section class="copyright">
-  <p>© 2025 Colorado Stain Master. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
-</section>
-
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
